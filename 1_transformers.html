@@ -75,6 +75,7 @@
 								<p>Now let's take a look at decoder and it has three main layers: Masked multi-head attention, Multi-head attention and Feed-forward. At the very beginning, inputs for the decoder send as encoder input such as embedding of target values send after send them through output embedding and positional encoding.</p>
 								<p>The process of masked multi-head attention is same as the multi-head attention process that described in above. But there is a small change in that one. After multiply query and transpose of key matrices, mask is added with them. After that the other process is same as above mentioned process and with the same sizes of the matrices.</p>
 								<p>The second layer is the multi-head attention. In here output of encoder send as key and value matrices with the output of masked multi-head attention as the query matrix. Send the output through normalization layer with the query matrix as the residual connection. Finally send them through fully connected feed-forward network and send through linear and softmax layer to calculate the final probability value. 6 encoders and 6 decoders are used in original paper.</p>
+								<p>The code implemenation is in here:<a href="https://github.com/tad-ai/AI-Research-Paper-Implementation/tree/main/Attention_is_all_you_need">Attention is all you need</a></p>
 							</section>
 
 					</div>
